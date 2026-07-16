@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora Mind — Agência digital premium. Sites institucionais, landing pages de alta conversão e cardápios digitais com design futurista e SEO otimizado.">
+  <meta name="keywords" content="agência digital, sites institucionais, landing pages, web design, Aurora Mind">
+  <meta name="author" content="Aurora Mind">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta property="og:title" content="Aurora Mind | Agência Digital Premium">
+  <meta property="og:description" content="Transformamos ideias em plataformas digitais de alta conversão.">
+  <meta property="og:type" content="website">
+  <title>Aurora Mind | Agência Digital Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+</head>
+<body>
+
+  <!-- Aurora Background Particles -->
+  <div class="aurora-bg" aria-hidden="true">
+    <div class="aurora-orb aurora-orb--1"></div>
+    <div class="aurora-orb aurora-orb--2"></div>
+    <div class="aurora-orb aurora-orb--3"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  </div>
+
+  <!-- Promo Banner -->
+  <div class="promo-bar" role="banner">
+    <div class="promo-bar__inner container">
+      <span class="promo-bar__badge">🔥 Oferta do Mês</span>
+      <p class="promo-bar__text"><strong>R$100 OFF</strong> em todos os planos — preços justos de mercado com desconto exclusivo!</p>
+      <a href="#comprar" class="promo-bar__cta">Garantir agora →</a>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="nav__logo" aria-label="Aurora Mind — Início">
+        <svg class="nav__logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2"/>
+          <circle cx="16" cy="16" r="6" fill="url(#logoGrad)"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+              <stop offset="0%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#06b6d4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Aurora Mind</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
+        <li><a href="#planos" class="nav__link">Planos</a></li>
+        <li><a href="#comprar" class="nav__link">Comprar</a></li>
+        <li><a href="#como-funciona" class="nav__link">Como Funciona</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+      </ul>
+
+      <a href="#comprar" class="btn btn--primary btn--sm nav__cta">Comprar Agora</a>
+
+      <button class="nav__hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </nav>
+    <div class="nav__overlay" id="navOverlay" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge fade-in">
+            <span class="hero__badge-dot"></span>
+            Agência Digital Premium
+          </div>
+          <h1 class="hero__title fade-in" id="hero-title">
+            Transformamos ideias em
+            <span class="gradient-text">plataformas digitais de alta conversão</span>
+          </h1>
+          <p class="hero__subtitle fade-in">
+            Design futurista, código otimizado e estratégias de conversão que elevam sua marca ao próximo nível. Resultados mensuráveis, entrega rápida.
+          </p>
+          <div class="hero__actions fade-in">
+            <a href="#planos" class="btn btn--outline">Ver Planos</a>
+            <a href="#comprar" class="btn btn--primary">Comprar Agora</a>
+          </div>
+          <div class="hero__trust fade-in">
+            <div class="hero__trust-avatars">
+              <span class="hero__avatar" style="--i:0">A</span>
+              <span class="hero__avatar" style="--i:1">M</span>
+              <span class="hero__avatar" style="--i:2">R</span>
+              <span class="hero__avatar" style="--i:3">+</span>
+            </div>
+            <p><strong>120+</strong> projetos entregues com excelência</p>
+          </div>
+        </div>
+
+        <div class="hero__visual fade-in">
+          <div class="dashboard float">
+            <div class="dashboard__header">
+              <div class="dashboard__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="dashboard__url">auroramind.app/dashboard</span>
+            </div>
+            <div class="dashboard__body">
+              <div class="dashboard__sidebar">
+                <div class="dashboard__nav-item dashboard__nav-item--active"></div>
+                <div class="dashboard__nav-item"></div>
+                <div class="dashboard__nav-item"></div>
+                <div class="dashboard__nav-item"></div>
+              </div>
+              <div class="dashboard__main">
+                <div class="dashboard__stats">
+                  <div class="dashboard__stat">
+                    <span class="dashboard__stat-label">Conversão</span>
+                    <span class="dashboard__stat-value gradient-text">+150%</span>
+                  </div>
+                  <div class="dashboard__stat">
+                    <span class="dashboard__stat-label">Visitantes</span>
+                    <span class="dashboard__stat-value">12.4k</span>
+                  </div>
+                  <div class="dashboard__stat">
+                    <span class="dashboard__stat-label">Receita</span>
+                    <span class="dashboard__stat-value">R$ 89k</span>
+                  </div>
+                </div>
+                <div class="dashboard__chart">
+                  <div class="dashboard__bar" style="--h:40%"></div>
+                  <div class="dashboard__bar" style="--h:65%"></div>
+                  <div class="dashboard__bar" style="--h:45%"></div>
+                  <div class="dashboard__bar" style="--h:80%"></div>
+                  <div class="dashboard__bar" style="--h:60%"></div>
+                  <div class="dashboard__bar" style="--h:95%"></div>
+                  <div class="dashboard__bar" style="--h:75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ESTATÍSTICAS ==================== -->
+    <section class="stats" id="servicos" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 class="section-title fade-in" id="stats-title">Resultados que <span class="gradient-text">falam por si</span></h2>
+        <p class="section-subtitle fade-in">Métricas reais de impacto para o seu negócio digital</p>
+        <div class="stats__grid">
+          <article class="stats__card fade-in">
+            <div class="stats__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <span class="stats__number" data-target="150">+150%</span>
+            <span class="stats__label">de conversão</span>
+          </article>
+          <article class="stats__card fade-in">
+            <div class="stats__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <line x1="12" y1="18" x2="12" y2="18"/>
+              </svg>
+            </div>
+            <span class="stats__number">100%</span>
+            <span class="stats__label">Design Responsivo</span>
+          </article>
+          <article class="stats__card fade-in">
+            <div class="stats__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <span class="stats__number">SEO</span>
+            <span class="stats__label">Código Otimizado para SEO</span>
+          </article>
+          <article class="stats__card fade-in">
+            <div class="stats__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="stats__number">24/7</span>
+            <span class="stats__label">Suporte dedicado</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PORTFÓLIO ==================== -->
+    <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <h2 class="section-title fade-in" id="portfolio-title">Nosso <span class="gradient-text">Portfólio</span></h2>
+        <p class="section-subtitle fade-in">Soluções digitais que geram resultados reais para nossos clientes</p>
+        <div class="portfolio__grid">
+          <article class="portfolio__card fade-in">
+            <div class="portfolio__image portfolio__image--institutional">
+              <div class="portfolio__overlay">
+                <span class="portfolio__tag">Institucional</span>
+                <h3 class="portfolio__name">Websites Institucionais</h3>
+                <p class="portfolio__desc">Presença digital profissional com identidade visual marcante e navegação intuitiva.</p>
+                <a href="#comprar" class="portfolio__cta">Quero este →</a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio__card fade-in">
+            <div class="portfolio__image portfolio__image--landing">
+              <div class="portfolio__overlay">
+                <span class="portfolio__tag">Conversão</span>
+                <h3 class="portfolio__name">Landing Pages de Alta Conversão</h3>
+                <p class="portfolio__desc">Páginas estrategicamente projetadas para transformar visitantes em clientes.</p>
+                <a href="#comprar" class="portfolio__cta">Quero este →</a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio__card fade-in">
+            <div class="portfolio__image portfolio__image--menu">
+              <div class="portfolio__overlay">
+                <span class="portfolio__tag">Gastronomia</span>
+                <h3 class="portfolio__name">Cardápios Digitais Interativos</h3>
+                <p class="portfolio__desc">Experiência imersiva para restaurantes com pedidos integrados e design premium.</p>
+                <a href="#comprar" class="portfolio__cta">Quero este →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PLANOS / PREÇOS ==================== -->
+    <section class="pricing" id="planos" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 class="section-title fade-in" id="pricing-title">Planos que <span class="gradient-text">impulsionam</span> seu negócio</h2>
+        <p class="section-subtitle fade-in">Escolha entre projeto único ou assinatura mensal — <strong class="gradient-text">R$100 de desconto</strong> em todos os planos este mês</p>
+
+        <!-- Toggle Projeto / Mensal -->
+        <div class="pricing__toggle fade-in" role="tablist" aria-label="Tipo de plano">
+          <button class="pricing__toggle-btn pricing__toggle-btn--active" data-billing="projeto" role="tab" aria-selected="true">Projeto Único</button>
+          <button class="pricing__toggle-btn" data-billing="mensal" role="tab" aria-selected="false">
+            Planos Mensais
+            <span class="pricing__toggle-badge">Popular</span>
+          </button>
+        </div>
+
+        <!-- Planos Projeto Único -->
+        <div class="pricing__panel pricing__panel--active" id="pricing-projeto" data-billing="projeto">
+          <div class="pricing__grid">
+            <article class="pricing__card fade-in">
+              <div class="pricing__header">
+                <h3 class="pricing__name">Básico</h3>
+                <p class="pricing__desc">Ideal para quem está começando</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 1.097</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">997</span>
+                  <span class="pricing__period">/projeto</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Landing page de 1 página</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Design responsivo mobile-first</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Otimização SEO básica</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Integração WhatsApp</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Entrega em até 7 dias</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>30 dias de suporte</li>
+              </ul>
+              <button class="btn btn--outline btn--full pricing__btn" data-plan="Básico" data-billing="projeto" data-price="997" data-original="1097" data-period="/projeto">Contratar Plano</button>
+            </article>
+
+            <article class="pricing__card fade-in">
+              <div class="pricing__header">
+                <h3 class="pricing__name">Intermediário</h3>
+                <p class="pricing__desc">Para negócios em crescimento</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 2.097</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">1.997</span>
+                  <span class="pricing__period">/projeto</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Site institucional até 5 páginas</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Design premium personalizado</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO avançado + Google Analytics</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Formulário de contato integrado</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Animações e micro-interações</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Entrega em até 14 dias</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>60 dias de suporte</li>
+              </ul>
+              <button class="btn btn--outline btn--full pricing__btn" data-plan="Intermediário" data-billing="projeto" data-price="1997" data-original="2097" data-period="/projeto">Contratar Plano</button>
+            </article>
+
+            <article class="pricing__card pricing__card--featured fade-in">
+              <div class="pricing__badge">Mais Vendido</div>
+              <div class="pricing__header">
+                <h3 class="pricing__name">Profissional</h3>
+                <p class="pricing__desc">Solução completa para escalar</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 3.597</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">3.497</span>
+                  <span class="pricing__period">/projeto</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Site completo + landing pages</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>UI/UX design exclusivo</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO técnico + performance 90+</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cardápio digital ou e-commerce</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Automações e integrações API</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Entrega em até 21 dias</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte 24/7 por 90 dias</li>
+              </ul>
+              <button class="btn btn--primary btn--full pricing__btn" data-plan="Profissional" data-billing="projeto" data-price="3497" data-original="3597" data-period="/projeto">Contratar Plano</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- Planos Mensais -->
+        <div class="pricing__panel" id="pricing-mensal" data-billing="mensal" hidden>
+          <div class="pricing__grid">
+            <article class="pricing__card fade-in visible">
+              <div class="pricing__header">
+                <h3 class="pricing__name">Básico</h3>
+                <p class="pricing__desc">Manutenção e presença digital contínua</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 297</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">197</span>
+                  <span class="pricing__period">/mês</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hospedagem e domínio inclusos</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Atualizações de conteúdo (2h/mês)</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Monitoramento e backups semanais</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte via WhatsApp</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Relatório mensal de performance</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Sem taxa de setup</li>
+              </ul>
+              <button class="btn btn--outline btn--full pricing__btn" data-plan="Básico Mensal" data-billing="mensal" data-price="197" data-original="297" data-period="/mês">Assinar Plano</button>
+            </article>
+
+            <article class="pricing__card fade-in visible">
+              <div class="pricing__header">
+                <h3 class="pricing__name">Intermediário</h3>
+                <p class="pricing__desc">Crescimento digital com SEO contínuo</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 497</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">397</span>
+                  <span class="pricing__period">/mês</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Básico</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO mensal + otimização contínua</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics + Search Console</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>5h de alterações por mês</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>1 landing page por trimestre</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Prioridade no suporte</li>
+              </ul>
+              <button class="btn btn--outline btn--full pricing__btn" data-plan="Intermediário Mensal" data-billing="mensal" data-price="397" data-original="497" data-period="/mês">Assinar Plano</button>
+            </article>
+
+            <article class="pricing__card pricing__card--featured fade-in visible">
+              <div class="pricing__badge">Mais Vendido</div>
+              <div class="pricing__header">
+                <h3 class="pricing__name">Profissional</h3>
+                <p class="pricing__desc">Gestão digital completa do seu negócio</p>
+              </div>
+              <div class="pricing__discount-tag">-R$100 este mês</div>
+              <div class="pricing__price">
+                <span class="pricing__old">R$ 797</span>
+                <div class="pricing__price-row">
+                  <span class="pricing__currency">R$</span>
+                  <span class="pricing__amount">697</span>
+                  <span class="pricing__period">/mês</span>
+                </div>
+              </div>
+              <ul class="pricing__features">
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do plano Intermediário</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>10h de desenvolvimento/mês</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Automações e integrações</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Consultoria estratégica mensal</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte 24/7 dedicado</li>
+                <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Gestor de conta exclusivo</li>
+              </ul>
+              <button class="btn btn--primary btn--full pricing__btn" data-plan="Profissional Mensal" data-billing="mensal" data-price="697" data-original="797" data-period="/mês">Assinar Plano</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="pricing__note fade-in">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <p>Pagamento via <strong>PIX</strong>, cartão ou boleto. Após preencher o checkout, finalizamos juntos pelo WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMO FUNCIONA ==================== -->
+    <section class="process" id="como-funciona" aria-labelledby="process-title">
+      <div class="container">
+        <h2 class="section-title fade-in" id="process-title">Como <span class="gradient-text">funciona</span> a contratação</h2>
+        <p class="section-subtitle fade-in">Processo simples, transparente e 100% digital — do pedido ao site no ar</p>
+        <div class="process__grid">
+          <article class="process__step fade-in">
+            <div class="process__number">01</div>
+            <h3 class="process__title">Escolha seu plano</h3>
+            <p class="process__desc">Selecione entre projeto único ou mensal e clique em contratar para ir à área de compras.</p>
+          </article>
+          <article class="process__step fade-in">
+            <div class="process__number">02</div>
+            <h3 class="process__title">Preencha o checkout</h3>
+            <p class="process__desc">Informe seus dados, empresa e detalhes do projeto. Leva menos de 2 minutos.</p>
+          </article>
+          <article class="process__step fade-in">
+            <div class="process__number">03</div>
+            <h3 class="process__title">Finalize no WhatsApp</h3>
+            <p class="process__desc">Enviamos seu pedido formatado. Confirmamos pagamento e iniciamos imediatamente.</p>
+          </article>
+          <article class="process__step fade-in">
+            <div class="process__number">04</div>
+            <h3 class="process__title">Receba seu site</h3>
+            <p class="process__desc">Acompanhe cada etapa com previews. Entrega no prazo com suporte incluso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ÁREA DE COMPRAS / CHECKOUT ==================== -->
+    <section class="checkout" id="comprar" aria-labelledby="checkout-title">
+      <div class="container">
+        <div class="checkout__header fade-in">
+          <h2 class="section-title" id="checkout-title">Área de <span class="gradient-text">Compras</span></h2>
+          <p class="section-subtitle">Selecione seu plano, preencha seus dados e finalize pelo WhatsApp — resposta em até 1 hora!</p>
+        </div>
+
+        <div class="checkout__wrapper fade-in">
+          <!-- Resumo do Pedido -->
+          <aside class="checkout__summary" aria-label="Resumo do pedido">
+            <h3 class="checkout__summary-title">Resumo do Pedido</h3>
+            <div class="checkout__summary-card" id="summaryCard">
+              <div class="checkout__summary-row">
+                <span class="checkout__summary-label">Plano</span>
+                <span class="checkout__summary-value" id="summaryPlan">Selecione um plano</span>
+              </div>
+              <div class="checkout__summary-row">
+                <span class="checkout__summary-label">Modalidade</span>
+                <span class="checkout__summary-value" id="summaryBilling">—</span>
+              </div>
+              <div class="checkout__summary-row">
+                <span class="checkout__summary-label">Desconto</span>
+                <span class="checkout__summary-value checkout__summary-discount" id="summaryDiscount">—</span>
+              </div>
+              <div class="checkout__summary-row checkout__summary-row--total">
+                <span class="checkout__summary-label">Valor</span>
+                <span class="checkout__summary-price" id="summaryPrice">R$ —</span>
+              </div>
+            </div>
+
+            <div class="checkout__trust">
+              <div class="checkout__trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Dados protegidos</span>
+              </div>
+              <div class="checkout__trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Garantia de satisfação</span>
+              </div>
+              <div class="checkout__trust-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span>PIX, cartão ou boleto</span>
+              </div>
+            </div>
+
+            <a href="#planos" class="checkout__change-plan">← Alterar plano</a>
+          </aside>
+
+          <!-- Formulário -->
+          <form class="checkout__form" id="checkoutForm" novalidate>
+            <fieldset class="checkout__fieldset">
+              <legend class="checkout__legend">Escolha seu Plano</legend>
+              <div class="checkout__plan-tabs" role="tablist" aria-label="Tipo de plano">
+                <button type="button" class="checkout__plan-tab checkout__plan-tab--active" data-billing="projeto" role="tab" aria-selected="true">Sites — Projeto Único</button>
+                <button type="button" class="checkout__plan-tab" data-billing="mensal" role="tab" aria-selected="false">Planos Mensais</button>
+              </div>
+              <div class="checkout__plan-grid" id="checkoutPlanGrid">
+                <label class="checkout__plan-option">
+                  <input type="radio" name="selectedPlan" value="basico-projeto" data-plan="Básico" data-billing="projeto" data-price="997" data-original="1097" data-period="/projeto">
+                  <span class="checkout__plan-card">
+                    <span class="checkout__plan-name">Básico</span>
+                    <span class="checkout__plan-type">Landing Page</span>
+                    <span class="checkout__plan-price">R$ 997<small>/projeto</small></span>
+                    <span class="checkout__plan-old">de R$ 1.097</span>
+                  </span>
+                </label>
+                <label class="checkout__plan-option">
+                  <input type="radio" name="selectedPlan" value="intermediario-projeto" data-plan="Intermediário" data-billing="projeto" data-price="1997" data-original="2097" data-period="/projeto">
+                  <span class="checkout__plan-card">
+                    <span class="checkout__plan-name">Intermediário</span>
+                    <span class="checkout__plan-type">Site Institucional</span>
+                    <span class="checkout__plan-price">R$ 1.997<small>/projeto</small></span>
+                    <span class="checkout__plan-old">de R$ 2.097</span>
+                  </span>
+                </label>
+                <label class="checkout__plan-option">
+                  <input type="radio" name="selectedPlan" value="profissional-projeto" data-plan="Profissional" data-billing="projeto" data-price="3497" data-original="3597" data-period="/projeto">
+                  <span class="checkout__plan-card checkout__plan-card--featured">
+                    <span class="checkout__plan-badge">Mais Vendido</span>
+                    <span class="checkout__plan-name">Profissional</span>
+                    <span class="checkout__plan-type">Site Completo</span>
+                    <span class="checkout__plan-price">R$ 3.497<small>/projeto</small></span>
+                    <span class="checkout__plan-old">de R$ 3.597</span>
+                  </span>
+                </label>
+                <label class="checkout__plan-option checkout__plan-option--mensal" hidden>
+                  <input type="radio" name="selectedPlan" value="basico-mensal" data-plan="Básico Mensal" data-billing="mensal" data-price="197" data-original="297" data-period="/mês">
+                  <span class="checkout__plan-card">
+                    <span class="checkout__plan-name">Básico Mensal</span>
+                    <span class="checkout__plan-type">Manutenção + Hospedagem</span>
+                    <span class="checkout__plan-price">R$ 197<small>/mês</small></span>
+                    <span class="checkout__plan-old">de R$ 297</span>
+                  </span>
+                </label>
+                <label class="checkout__plan-option checkout__plan-option--mensal" hidden>
+                  <input type="radio" name="selectedPlan" value="intermediario-mensal" data-plan="Intermediário Mensal" data-billing="mensal" data-price="397" data-original="497" data-period="/mês">
+                  <span class="checkout__plan-card">
+                    <span class="checkout__plan-name">Intermediário Mensal</span>
+                    <span class="checkout__plan-type">SEO + Atualizações</span>
+                    <span class="checkout__plan-price">R$ 397<small>/mês</small></span>
+                    <span class="checkout__plan-old">de R$ 497</span>
+                  </span>
+                </label>
+                <label class="checkout__plan-option checkout__plan-option--mensal" hidden>
+                  <input type="radio" name="selectedPlan" value="profissional-mensal" data-plan="Profissional Mensal" data-billing="mensal" data-price="697" data-original="797" data-period="/mês">
+                  <span class="checkout__plan-card checkout__plan-card--featured">
+                    <span class="checkout__plan-badge">Mais Vendido</span>
+                    <span class="checkout__plan-name">Profissional Mensal</span>
+                    <span class="checkout__plan-type">Gestão Completa</span>
+                    <span class="checkout__plan-price">R$ 697<small>/mês</small></span>
+                    <span class="checkout__plan-old">de R$ 797</span>
+                  </span>
+                </label>
+              </div>
+              <span class="checkout__error" id="errorPlan"></span>
+            </fieldset>
+
+            <fieldset class="checkout__fieldset">
+              <legend class="checkout__legend">Dados Pessoais</legend>
+              <div class="checkout__row">
+                <div class="checkout__field">
+                  <label for="checkoutName">Nome completo <span aria-hidden="true">*</span></label>
+                  <input type="text" id="checkoutName" name="name" required autocomplete="name" placeholder="Seu nome completo">
+                  <span class="checkout__error" id="errorName"></span>
+                </div>
+                <div class="checkout__field">
+                  <label for="checkoutEmail">E-mail <span aria-hidden="true">*</span></label>
+                  <input type="email" id="checkoutEmail" name="email" required autocomplete="email" placeholder="seu@email.com">
+                  <span class="checkout__error" id="errorEmail"></span>
+                </div>
+              </div>
+              <div class="checkout__row">
+                <div class="checkout__field">
+                  <label for="checkoutPhone">WhatsApp / Telefone <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="checkoutPhone" name="phone" required autocomplete="tel" placeholder="(32) 99999-9999">
+                  <span class="checkout__error" id="errorPhone"></span>
+                </div>
+                <div class="checkout__field">
+                  <label for="checkoutDoc">CPF ou CNPJ</label>
+                  <input type="text" id="checkoutDoc" name="document" placeholder="000.000.000-00">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="checkout__fieldset">
+              <legend class="checkout__legend">Dados do Negócio</legend>
+              <div class="checkout__row">
+                <div class="checkout__field">
+                  <label for="checkoutCompany">Empresa / Nome do negócio <span aria-hidden="true">*</span></label>
+                  <input type="text" id="checkoutCompany" name="company" required placeholder="Nome da sua empresa">
+                  <span class="checkout__error" id="errorCompany"></span>
+                </div>
+                <div class="checkout__field">
+                  <label for="checkoutSegment">Segmento</label>
+                  <select id="checkoutSegment" name="segment">
+                    <option value="">Selecione...</option>
+                    <option value="Restaurante / Food">Restaurante / Food</option>
+                    <option value="E-commerce / Varejo">E-commerce / Varejo</option>
+                    <option value="Serviços">Serviços</option>
+                    <option value="Saúde / Clínica">Saúde / Clínica</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="checkout__field">
+                <label for="checkoutDetails">Detalhes do projeto / Observações</label>
+                <textarea id="checkoutDetails" name="details" rows="4" placeholder="Conte sobre seu projeto, objetivos, referências visuais, prazo desejado..."></textarea>
+              </div>
+            </fieldset>
+
+            <input type="hidden" id="checkoutPlanInput" name="plan" value="">
+            <input type="hidden" id="checkoutBillingInput" name="billing" value="">
+            <input type="hidden" id="checkoutPriceInput" name="price" value="">
+
+            <div class="checkout__terms">
+              <label class="checkout__checkbox">
+                <input type="checkbox" id="checkoutTerms" name="terms" required>
+                <span class="checkout__checkbox-box"></span>
+                <span>Li e concordo com os termos de contratação e política de privacidade da Aurora Mind.</span>
+              </label>
+              <span class="checkout__error" id="errorTerms"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full checkout__submit" id="checkoutSubmit">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Finalizar e Enviar no WhatsApp
+            </button>
+            <p class="checkout__disclaimer">Ao clicar, você será redirecionado ao WhatsApp com seu pedido formatado. Nossa equipe responde em até 1 hora útil.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GARANTIAS ==================== -->
+    <section class="guarantees" aria-labelledby="guarantees-title">
+      <div class="container">
+        <div class="guarantees__grid">
+          <article class="guarantees__item fade-in">
+            <div class="guarantees__icon">✓</div>
+            <h3 class="guarantees__title">Garantia de 7 dias</h3>
+            <p class="guarantees__desc">Não ficou satisfeito? Ajustamos ou devolvemos conforme contrato.</p>
+          </article>
+          <article class="guarantees__item fade-in">
+            <div class="guarantees__icon">⚡</div>
+            <h3 class="guarantees__title">Entrega no prazo</h3>
+            <p class="guarantees__desc">Compromisso com datas acordadas. Atraso? Desconto na mensalidade.</p>
+          </article>
+          <article class="guarantees__item fade-in">
+            <div class="guarantees__icon">🔒</div>
+            <h3 class="guarantees__title">Pagamento seguro</h3>
+            <p class="guarantees__desc">PIX, cartão ou boleto. Nota fiscal emitida para todos os planos.</p>
+          </article>
+          <article class="guarantees__item fade-in">
+            <div class="guarantees__icon">💬</div>
+            <h3 class="guarantees__title">Suporte humanizado</h3>
+            <p class="guarantees__desc">Atendimento real via WhatsApp, sem robôs. Resposta em até 1 hora.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DEPOIMENTOS ==================== -->
+    <section class="testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 class="section-title fade-in" id="testimonials-title">O que nossos <span class="gradient-text">clientes dizem</span></h2>
+        <p class="section-subtitle fade-in">Prova social de quem já transformou seu negócio conosco</p>
+        <div class="testimonials__grid">
+          <article class="testimonial fade-in">
+            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__text">
+              "A Aurora Mind transformou completamente nossa presença online. Em 30 dias, nossa taxa de conversão subiu 180%. Profissionalismo impecável."
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true">RC</div>
+              <div>
+                <cite class="testimonial__name">Ricardo Campos</cite>
+                <span class="testimonial__role">CEO, TechFlow Solutions</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial fade-in">
+            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__text">
+              "O cardápio digital que criaram revolucionou nosso restaurante. Pedidos aumentaram 60% e os clientes adoram a experiência. Recomendo demais!"
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar testimonial__avatar--2" aria-hidden="true">MS</div>
+              <div>
+                <cite class="testimonial__name">Mariana Silva</cite>
+                <span class="testimonial__role">Proprietária, Sabor & Arte</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial fade-in">
+            <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial__text">
+              "Entrega rápida, comunicação clara e um site que realmente vende. Nossa landing page gerou R$ 45k no primeiro mês. Investimento que se paga."
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar testimonial__avatar--3" aria-hidden="true">FA</div>
+              <div>
+                <cite class="testimonial__name">Felipe Andrade</cite>
+                <span class="testimonial__role">Fundador, GrowthLab</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__wrapper">
+        <div class="faq__intro fade-in">
+          <h2 class="section-title" id="faq-title">Perguntas <span class="gradient-text">Frequentes</span></h2>
+          <p class="section-subtitle">Tire suas dúvidas antes de iniciar seu projeto conosco</p>
+        </div>
+        <div class="faq__list fade-in" role="list">
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Como funciona o pagamento e checkout?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Escolha seu plano, preencha a área de compras com seus dados e clique em "Finalizar no WhatsApp". Enviamos seu pedido formatado e combinamos pagamento via PIX, cartão ou boleto. Após confirmação, iniciamos o projeto imediatamente.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Qual a diferença entre projeto único e plano mensal?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>O projeto único é pagamento único para criação do site. O plano mensal inclui hospedagem, manutenção, atualizações e suporte contínuo — ideal para quem quer presença digital sempre atualizada sem se preocupar com a parte técnica.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Posso cancelar o plano mensal?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Sim. Os planos mensais não possuem fidelidade. Você pode cancelar a qualquer momento com aviso de 30 dias. Seus arquivos e domínio permanecem seus.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Vocês emitem nota fiscal?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Sim! Emitimos nota fiscal para todos os planos, seja projeto único ou mensal. Informe CPF ou CNPJ no checkout para agilizar a emissão.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Quanto tempo demora para meu site ficar pronto?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>O prazo varia conforme o plano escolhido: o Básico é entregue em até 7 dias, o Intermediário em até 14 dias e o Profissional em até 21 dias. Trabalhamos com metodologia ágil para garantir entregas rápidas sem comprometer a qualidade.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>O site é otimizado para celulares?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Sim! Todos os nossos projetos são desenvolvidos com abordagem mobile-first. Testamos em dispositivos de 320px até monitores 4K, garantindo uma experiência impecável em qualquer tela.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Como funciona o suporte pós-entrega?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Oferecemos suporte via WhatsApp e e-mail durante o período incluso no seu plano (30, 60 ou 90 dias). No plano Profissional, o suporte é 24/7. Corrigimos bugs, fazemos ajustes menores e orientamos sobre atualizações de conteúdo.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Posso solicitar alterações durante o desenvolvimento?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Com certeza! Trabalhamos em ciclos de feedback. Você recebe previews do projeto em etapas e pode solicitar ajustes antes da entrega final. Cada plano inclui até 2 rodadas de revisão sem custo adicional.</p>
+            </div>
+          </div>
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false">
+              <span>Vocês cuidam do domínio e hospedagem?</span>
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </button>
+            <div class="faq__answer" hidden>
+              <p>Podemos orientar na escolha e configuração de domínio e hospedagem, ou gerenciar tudo para você como serviço adicional. Recomendamos provedores confiáveis com excelente performance e suporte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="cta-final" aria-labelledby="cta-final-title">
+      <div class="container cta-final__inner fade-in">
+        <div class="cta-final__content">
+          <span class="cta-final__badge">⏰ Últimas vagas com desconto</span>
+          <h2 class="cta-final__title" id="cta-final-title">Pronto para <span class="gradient-text">transformar seu negócio</span>?</h2>
+          <p class="cta-final__desc">Mais de 120 projetos entregues. Garanta R$100 OFF e comece hoje — sem burocracia, direto pelo WhatsApp.</p>
+        </div>
+        <div class="cta-final__actions">
+          <a href="#comprar" class="btn btn--primary btn--lg">Comprar Agora</a>
+          <a href="https://wa.me/5532999577201?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20planos%20da%20Aurora%20Mind." class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="nav__logo">
+          <svg class="nav__logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="14" stroke="url(#logoGrad2)" stroke-width="2"/>
+            <circle cx="16" cy="16" r="6" fill="url(#logoGrad2)"/>
+            <defs>
+              <linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#8b5cf6"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Aurora Mind</span>
+        </a>
+        <p class="footer__tagline">Transformando ideias em experiências digitais de alta conversão.</p>
+        <div class="footer__contact">
+          <a href="tel:+5532999577201" class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (32) 99957-7201
+          </a>
+          <a href="mailto:contato@auroramind.com.br" class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contato@auroramind.com.br
+          </a>
+          <span class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Seg–Sex, 9h às 18h
+          </span>
+        </div>
+      </div>
+      <nav class="footer__links" aria-label="Links rápidos">
+        <h3 class="footer__heading">Links Rápidos</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#comprar">Comprar</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <nav class="footer__links" aria-label="Serviços">
+        <h3 class="footer__heading">Serviços</h3>
+        <ul>
+          <li><a href="#portfolio">Sites Institucionais</a></li>
+          <li><a href="#portfolio">Landing Pages</a></li>
+          <li><a href="#portfolio">Cardápios Digitais</a></li>
+          <li><a href="#planos">Consultoria SEO</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <h3 class="footer__heading">Redes Sociais</h3>
+        <div class="footer__social-icons">
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/5532999577201" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2026 Aurora Mind — Agência Digital. Todos os direitos reservados.</p>
+      <p class="footer__legal">Juiz de Fora, MG · CNPJ sob consulta · <a href="#comprar">Contratar serviços</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5532999577201?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Aurora%20Mind." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-float__pulse" aria-hidden="true"></span>
+  </a>
+
+  <!-- Social Proof Notifications -->
+  <div class="social-proof" id="socialProof" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="#comprar" class="sticky-cta__btn">
+      <span class="sticky-cta__text">R$100 OFF — Comprar Agora</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
